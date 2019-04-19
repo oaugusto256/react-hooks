@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import ResourceList from './ResourceList';
+import UserList from './UserList';
 
-const Todo = () => {
+const App = () => {
   const [resource, setResource] = useState('posts');
 
   return (
     <>
       <h1>React Hooks</h1>
       <div>
+        <UserList />
         <div>
           <button onClick={() => setResource('todos')}>Todos</button>
           <button onClick={() => setResource('posts')}>Posts</button>
@@ -18,4 +20,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default App;

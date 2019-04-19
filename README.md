@@ -1,6 +1,6 @@
 ## What is it?
 
-A generic To do app made using hooks instead of class based components.
+A generic ReactJS app made to train React hooks instead of class based components.
 
 ## How to use it?
 

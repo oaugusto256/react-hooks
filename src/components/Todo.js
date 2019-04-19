@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-export default class Todo extends Component {
-  state = {
-    resource: 'posts'
-  };
+const Todo = () => {
+  const [resource, setResource] = useState('posts');
 
-  render() {
-    return (
-      <>
-        <h1>React Hooks</h1>
+  return (
+    <>
+      <h1>React Hooks</h1>
+      <div>
         <div>
-          <div>
-            <button onClick={() => this.setState({ resource: 'todos ' })}>
-              Todos
-            </button>
-            <button onClick={() => this.setState({ resource: 'posts ' })}>
-              Posts
-            </button>
-          </div>
-          {this.state.resource}
+          <button onClick={() => setResource('posts')}>Todos</button>
+          <button onClick={() => setResource('todos')}>Posts</button>
         </div>
-      </>
-    );
-  }
-}
+        {resource}
+      </div>
+    </>
+  );
+};
+
+export default Todo;
